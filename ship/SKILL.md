@@ -1,6 +1,6 @@
 ---
 name: ship
-description: Branch, commit, version-bump (if npm project), push, and open a PR. Use when the user says "ship", "open a PR", "push this", "create a pull request", "commit and push", or "release this".
+description: Branch, commit, bump, push, and open a PR. Use when the user says "ship", "open a PR", "push this", "create a pull request", "commit and push", or "release this".
 ---
 
 # Ship
