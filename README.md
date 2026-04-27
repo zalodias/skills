@@ -1,3 +1,3 @@
 # skills
 
-Canonical source of truth for my personal agent skills.
+Canonical source of truth for my agent skills.
