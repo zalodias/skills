@@ -1,5 +1,5 @@
 ---
-name: git-conventions
+name: emoji-git
 description: Git conventions for commit messages, branch names, and pull requests. Use when committing, creating branches, writing PR titles or descriptions, or doing any git operation that requires formatting decisions.
 ---
 
@@ -86,7 +86,3 @@ PR titles inherit from the branch name: use the emoji that matches the branch pr
 | `release/v0.1.1`           | 🔖 Release v0.1.1      |
 
 PR bodies must include a summary of the changes. Describe what was done and why.
-
-## Releases
-
-Every release bumps the version. The `ship` skill runs `npm version patch` (or `minor`/`major` if specified) before pushing, so each release PR includes a version commit and tag.
