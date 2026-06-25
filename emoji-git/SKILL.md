@@ -84,5 +84,3 @@ PR titles inherit from the branch name: use the emoji that matches the branch pr
 | `fix/cart-null-reference`  | 🐛 Cart null reference |
 | `refactor/auth-hook`       | ♻️ Auth hook           |
 | `release/v0.1.1`           | 🔖 Release v0.1.1      |
-
-PR bodies must include a summary of the changes. Describe what was done and why.
