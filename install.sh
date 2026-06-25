@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-# Symlinks every skill in this repo into ~/.agents/skills so Cursor and other
-# agents (which read from ~/.cursor/skills -> ~/.agents/skills) pick them up.
-#
-# Idempotent: re-running replaces stale links and skips up-to-date ones.
-# Safe: refuses to overwrite a non-symlink.
+
+# Symlinks every skill in this repo into ~/.agents/skills
 
 set -euo pipefail
 
