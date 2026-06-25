@@ -30,14 +30,12 @@ Branch, commit & push changes, open a PR. Bumps the version if the project has a
 
 8. Create a PR using `gh pr create` following git-conventions:
    - Title: derive from the branch name — map the branch prefix to its emoji, convert the description from kebab-case to Sentence case.
-   - Body: summarise what changed and why. Use a HEREDOC to avoid quoting issues.
+   - Body: summarise what changed and why, then provide a testing checklist.
    - Target base branch: `main` unless the user specifies otherwise.
 
 ## Rules
 
 - Never `git add .` — always stage files explicitly by name.
-- Commit message bodies use the HEREDOC pattern to avoid quoting issues:
-  `git commit -m "$(cat <<'EOF' ... EOF)"`
 - Never amend, force-push, or skip hooks.
 - If the user provided a branch name or description as a parameter, use that instead of inferring one.
 - If the user specifies `minor` or `major` (e.g. "ship as a minor release"), use that for the version bump instead of `patch`.
