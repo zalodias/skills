@@ -1,9 +1,9 @@
 ---
-name: emoji-git
-description: Git conventions for commit messages, branch names, and pull requests. Use when committing, creating branches, writing PR titles or descriptions, or doing any git operation that requires formatting decisions.
+name: commit
+description: Git conventions for commit messages, branch names, and pull requests. Use when committing, creating branches, writing PR titles or descriptions, or doing any git operation that requires copy formatting decisions.
 ---
 
-# Emoji Git
+# Commit
 
 ## Commit Messages
 
