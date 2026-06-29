@@ -1,9 +1,9 @@
 ---
-name: code-style
+name: code
 description: Code style, naming, and formatting conventions for TypeScript and React projects. Use when writing TypeScript, creating React components, applying Tailwind styles, naming files, variables, or functions, or making any code style decisions.
 ---
 
-# Code Style
+# Code
 
 ## Naming
 
