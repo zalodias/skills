@@ -30,7 +30,7 @@ Branch, commit & push changes, open a PR. Bumps the version if the project has a
 
 8. Create a PR using `gh pr create` following git-conventions:
    - Title: derive from the branch name — map the branch prefix to its emoji, convert the description from kebab-case to Sentence case.
-   - Body: summarise what changed and why, then provide a testing checklist.
+   - Body: summarise what changed and why, then provide a "Testing" checklist.
    - Target base branch: `main` unless the user specifies otherwise.
 
 ## Rules
