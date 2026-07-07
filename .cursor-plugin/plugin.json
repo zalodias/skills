@@ -3,7 +3,7 @@
   "displayName": "zalodias",
   "author": { "name": "Gonçalo Dias" },
   "version": "1.0.0",
-  "description": "Canonical source of truth for my agent skills.",
+  "description": "Personal agent skills to power my workflow",
   "repository": "https://github.com/zalodias/skills",
   "skills": "./"
 }
