@@ -1,5 +1,7 @@
 {
   "name": "zalodias",
+  "displayName": "zalodias",
+  "author": { "name": "Gonçalo Dias" },
   "version": "1.0.0",
   "description": "Canonical source of truth for my agent skills.",
   "repository": "https://github.com/zalodias/skills",
