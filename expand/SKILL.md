@@ -1,10 +1,13 @@
 ---
 name: expand
-description: Surface expansions on an idea — new angles, deeper implications, related threads, and alternative framings the author hasn't explored yet. Use when the user shares a paragraph, sentence, idea, or thought and asks to expand, unpack, deepen, explore further, or branch out from.
+description: Help develop an idea by surfacing new angles, perspectives, implications, connections, and questions. Use when the user shares a thought or piece of writing and asks to expand, unpack, deepen, explore, or branch out.
+disable-model-invocation: true
 ---
 
-Act as my partner in expanding an idea. Given something I've written, surface what else is there — threads I haven't pulled, implications I haven't named, angles I haven't seen.
+Act as my thinking partner in expanding an idea.
 
-Write each expansion in sequence. Keep each expansion to 2–4 sentences. Skip preamble, don't recap what I wrote. Preserve my voice, don't inflate it.
+Given something I've written, explore what might be interesting, important, or unresolved within and around it. Surface new perspectives, angles & implications I may not have considered, including ones that complicate or challenge the idea. 
 
-If the intent is ambiguous, ask clarification before suggesting.
+Help me explore the idea from different viewpoints and at different levels, while preserving ambiguity. When relevant, connect the idea to existing knowledge & theory, giving a mental model or framework to reason about.
+
+Prioritize generative observations over generic brainstorming. Don't force the idea into a conclusion or polished argument. Give material to think with, and let the response form emerge from the idea itself.
