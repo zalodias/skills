@@ -1,55 +1,40 @@
 ---
 name: code
-description: Code style, naming, and formatting conventions for TypeScript and React projects. Use when writing TypeScript, creating React components, applying Tailwind styles, naming files, variables, or functions, or making any code style decisions.
+description: Code production guidance for agents. Use when writing React & TypeScript, building UI, naming files, variables and functions, or making any code styling decisions.
 ---
 
 # Code
 
-## Naming
+## Engineering
 
-- Use lowercase with dashes for directories and files (`components/auth-wizard`)
-- Prefer single-word names in variables, functions, types, and components
-- Never abbreviate — write `button` not `btn`, `error` not `err`
-- Favor named exports for components
-- Prefix event handlers with `handle` (`handleClick`, `handleSubmit`)
-- Prefix boolean variables with a verb (`isLoading`, `hasError`, `canSubmit`)
+- Choose the simplest implementation that fully meets the current requirements. Avoid speculative abstraction, configuration, and indirection.
+- Follow established project conventions. When the project has no local pattern, study how established products solve the problem and adopt a proven approach.
+- Prefer self-explanatory code. Avoid using code comments to emit context.
+- Extract highly reusable structures, or single-use sections that own meaningful state, interaction, or complex derived data. Keep simple single-use structures inline — avoid premature abstraction.
 
-## TypeScript
+## Naming & Syntax
 
-- Use TypeScript for all code; prefer interfaces over types
-- Use functional components with TypeScript interfaces
-- Define components with the `function` keyword
-- Avoid inline function definitions in JSX
-- Use absolute imports with the `@` alias (`@/components/button`)
+- Use lowercase names with dashes for directories and files (`components/auth-wizard`).
+- Give variables, functions, types, and components concise but descriptive names.
+- Avoid unclear abbreviations. Write `button` instead of `btn` and `error` instead of `err`.
+- Favor named exports for components.
+- Prefix event handlers with `handle` (`handleClick`, `handleSubmit`).
+- Prefix boolean variables with a verb (`isLoading`, `hasError`, `canSubmit`).
+- Use absolute imports with the `@` alias (`@/components/button`).
 
-## Formatting
+## React & TypeScript
 
-- Use the `function` keyword for pure functions
-- Omit semicolons
-- Use single quotes for strings (except to avoid escaping)
-- Use declarative JSX
-- Avoid code comments
+- Use TypeScript for application code.
+- Use interfaces for object shapes and component props. Use types for unions, tuples, and smaller compositions.
+- Define named components and top-level pure functions with the `function` keyword.
+- Use declarative JSX.
 
-## Tokens
+## Design
 
-- Do not create new global design tokens or CSS variables unless explicitly asked
-- Prefer reusing existing tokens and utilities; if a new token feels necessary, ask first
-
-## Styling
-
-- Use TailwindCSS for all styling; keep utility classes inline
-- Use the project design system and CSS variables defined in `globals.css`
-- Mobile-first responsive design
-
-## Spacing
-
-- Use a `4px` spacing grid for layout, padding, and margins
-- Prefer `gap` over `margin` for layout and inner-element spacing
-
-## Motion
-
-- Use animation and transition timing in `0.04s` increments (e.g. `0.12s`, `0.16s`, `0.2s`)
-
-## Components
-
-- Only extract a component when it is used (or likely to be used) in more than one place. Keep single-use UI sections inline.
+- Use Base UI as default for primitive interface language (`Button`, `Dialog`, `Table`),
+- Use shadcn/ui as a styling reference. Prefer existing shadcn/ui composition recipes over custom structures. Study how shadcn/ui solves the surface before inventing one.
+- Keep Tailwind utility classes inline. Avoid class extraction into custom variables.
+- Build UI from the project design system in `globals.css`, using semantic theme tokens such as `bg-background`, `text-foreground`, `border-border`.
+- Prefer reusing existing project tokens. Always ask before introducing a new design token.
+- Use a `4` pixel grid. Prefer macro spacing on round pixel steps (`20`, `40`, `80`) for layout & section rhythm. Use micro spacing (`8`, `16`, `24`) for compact & tight UI.
+- Prefer `gap` and `padding` for layout. Avoid using `margin`. Keep spacing inside the component to ensure encapsulation, modularity & reusability.
