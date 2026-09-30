@@ -34,6 +34,7 @@ description: Code production guidance for agents. Use when writing React & TypeS
 - Use Base UI as default for primitive interface language (`Button`, `Dialog`, `Table`),
 - Use shadcn/ui as a styling reference. Prefer existing shadcn/ui composition recipes over custom structures. Study how shadcn/ui solves the surface before inventing one.
 - Keep Tailwind utility classes inline. Avoid class extraction into custom variables.
+- Use `cn` when merging Tailwind classes, such as conditionals or conflicting utilities. For a single static class string, set `className` directly.
 - Build UI from the project design system in `globals.css`, using semantic theme tokens such as `bg-background`, `text-foreground`, `border-border`.
 - Prefer reusing existing project tokens. Always ask before introducing a new design token.
 - Use a `4` pixel grid. Prefer macro spacing on round pixel steps (`20`, `40`, `80`) for layout & section rhythm. Use micro spacing (`8`, `16`, `24`) for compact & tight UI.
