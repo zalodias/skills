@@ -16,4 +16,4 @@ Branch, commit, push changes, and open a PR.
 5. For each group, stage only the relevant files with `git add <files>` then commit following `/commit`.
 6. Run `git log --oneline` and show the result so the user can verify the history looks right.
 7. After explicit user approval, push with `git push -u origin HEAD`.
-8. Create a PR using `gh pr create`, providing a "Summary" of what changed and a "Testing" checklist.
+8. Create a PR using `gh pr create`. Provide a "Summary" of what changed and a "Testing" checklist. If applicable, start the body with the issue from `/slice` (`Closes #N`)
