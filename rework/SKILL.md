@@ -49,6 +49,7 @@ For a full reshape (wrong commit boundaries), `git reset --soft <base>` then rec
 ## Avoid
 
 - Opening a second PR to fix the first
+- Renaming the feature branch backing the PR. GitHub closes it, and it cannot be reopened onto the new name.
 - Adding `fix review feedback` or `address PR comments` commits on top
 - Pushing messy history and "clean up later"
 - Cherry-picking fixes onto a new branch when this branch can be reworked
