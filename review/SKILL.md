@@ -1,26 +1,30 @@
 ---
 name: review
-description: Review selected code and identify suggestions, fixes, and refactoring opportunities to produce cleaner, more scalable and concise code. Use when the user says "review this", "code review", "what would you improve", "refactor suggestions", or "review this PR".
+description: Review the diff since a pinned point on two axes — Form and Fit — then fix Must and cheap Should findings. Use after /implement, or when the user says "review" or "verify against the spec".
+disable-model-invocation: true
 ---
 
 # Review
 
-Review the selected code and identify suggestions, fixes, and refactoring opportunities to produce cleaner, scalable, and concise code.
+Perform a code review of the agent implementation, on two axes. Keep the axes separate so a clean style pass cannot hide a wrong implementation, or the reverse.
 
-## What to look for
+- **Form** — `/code` + any repo-specific code style rules.
+- **Fit** — the issue `/implement` just used (parent spec + child slice).
 
-- **Correctness** — logic errors, edge cases, off-by-one errors
-- **Clarity** — naming, structure, readability
-- **Simplicity** — unnecessary complexity, over-engineering, duplication
-- **Consistency** — follows project conventions and code style
-- **Performance** — obvious inefficiencies worth calling out
+## Steps
 
-## Output format
+1. **Pin** — Use the point from `/implement`. If none, ask. `git rev-parse` it.
+2. **Issue** — The issue from this chat, else `#n` in `git log <fixed-point>..HEAD --oneline`, else ask. Fetch with `gh issue view`. No issue → Fit says "no spec" and skips.
+3. **Spawn two sub-agents in parallel.** Each gets the three-dot diff command, the commit list, and one brief. ~300 words each. Skip what linters and types already enforce.
 
-Group findings by severity:
+**Form:** Violations of `/code` or repo docs — cite the rule. Also judgement-call smells in the diff only: mysterious names, duplication, speculative generality, shotgun edits. Tag Must / Should / Consider.
 
-- 🔴 **Must** — bugs, broken logic, security issues
-- 🟡 **Should** — clarity, naming, structure improvements
-- 🟢 **Consider** — optional enhancements, nice-to-haves
+**Fit:** (a) missing or partial requirements, (b) behavior the spec did not ask for, (c) implemented but wrong. Quote the spec or acceptance line. Tag Must / Should / Consider.
 
-Keep each point concise. Reference the specific code being discussed. Offer a concrete suggestion, not just a complaint.
+1. **Report** under `## Form` and `## Fit`. Do not merge or rerank across axes. One line: counts and the worst finding on each axis.
+2. **Apply** Must findings and cheap Should findings. Leave Consider in the report.
+3. **Re-check once** if anything changed. Two rounds max. Remaining Must findings → stop and list them.
+
+## Rules
+
+- No commits, no pull requests.
