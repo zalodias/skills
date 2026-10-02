@@ -22,6 +22,11 @@ description: Code production guidance for agents. Use when writing React & TypeS
 - Prefix boolean variables with a verb (`isLoading`, `hasError`, `canSubmit`).
 - Use absolute imports with the `@` alias (`@/components/button`).
 
+## Composition
+
+- Keep page and layout components in the server.
+- Treat client components as islands. Add `'use client'` only to the subtree that needs a state, effect, or browser API. Pass server-rendered content in as children.
+
 ## React & TypeScript
 
 - Use TypeScript for application code.
