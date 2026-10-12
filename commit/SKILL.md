@@ -28,7 +28,7 @@ Use imperative mood and prepend a semantic emoji. Keep the subject line under 72
 ✨ Add dark mode toggle to settings page
 🐛 Fix null reference on empty cart checkout
 ♻️ Extract auth logic into useAuth hook
-📦 Upgrade react to v19
+📦 Upgrade to React 19
 🎨 Sort imports and remove unused variables
 🔧 Add eslint rule for no-console
 📝 Update README with local dev setup steps
@@ -64,6 +64,8 @@ release/v0.1.1
 ## Pull Requests
 
 PR titles inherit from the branch name: use the emoji that matches the branch prefix, then the branch description in sentence case (kebab-case → Sentence case).
+
+When you expand the slug, restore conventional capitalization. Acronyms stay uppercase: UI, API, CLI. Product names use their spelling: React, TypeScript, Tailwind.
 
 **Format:** `<emoji> <Branch name in sentence case>`
 
