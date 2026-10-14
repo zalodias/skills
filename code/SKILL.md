@@ -15,7 +15,8 @@ description: Code production guidance for agents. Use when writing React & TypeS
 ## Naming & Syntax
 
 - Use lowercase names with dashes for directories and files (`components/auth-wizard`).
-- Give variables, functions, types, and components concise but descriptive names.
+- Give variables, functions, types, and components concise & clear naming.
+- Avoid verbosity or redundancy when naming modules. Omit words the enclosing module, function, or argument already makes clear.
 - Avoid unclear abbreviations. Write `button` instead of `btn` and `error` instead of `err`.
 - Favor named exports for components.
 - Prefix event handlers with `handle` (`handleClick`, `handleSubmit`).
@@ -37,9 +38,9 @@ description: Code production guidance for agents. Use when writing React & TypeS
 ## Design
 
 - Use Base UI as default for primitive interface language (`Button`, `Dialog`, `Table`),
-- Use shadcn/ui as a styling reference. Prefer existing shadcn/ui composition recipes over custom structures. Study how shadcn/ui solves the surface before inventing one.
+- Use `shadcn/ui` as a styling reference. Prefer existing `shadcn/ui` composition recipes over custom structures.
 - Keep Tailwind utility classes inline. Avoid class extraction into custom variables.
-- Use `cn` when merging Tailwind classes, such as conditionals or conflicting utilities. For a single static class string, set `className` directly.
+- Use `cn` from `shadcn-ui` when merging Tailwind classes, such as conditionals or conflicting utilities. For a single static class string, set `className` directly.
 - Build UI from the project design system in `globals.css`, using semantic theme tokens such as `bg-background`, `text-foreground`, `border-border`.
 - Prefer reusing existing project tokens. Always ask before introducing a new design token.
 - Use a `4` pixel grid. Prefer macro spacing on round pixel steps (`20`, `40`, `80`) for layout & section rhythm. Use micro spacing (`8`, `16`, `24`) for compact & tight UI.
