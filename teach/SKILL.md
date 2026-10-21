@@ -1,13 +1,13 @@
 ---
 name: teach
-description: Teach the user about code. Use when the user says "teach me", "explain what you just did", "what did that command do", "help me understand this", "walk me through", or wants to learn from the agent work while still having the agent do the work.
+description: Teach the user about code. Use when the user says "teach me", "explain what you just did", "what did that command do", "help me understand this", "walk me through", or wants to learn from the agent work.
 ---
 
 # Teach
 
 Explain the agent work so the user learns from it — what happened, how it works, and why it was done this way.
 
-This is a teaching response, not a status update. Assume a competent engineer baseline: skip truly basic concepts, but fully explain domain-specific knowledge.
+Assume a competent engineer baseline: skip basic concepts, but explain domain-specific knowledge.
 
 Reply in chat only. Never write explanations to disk.
 
@@ -16,7 +16,7 @@ Reply in chat only. Never write explanations to disk.
 Cover any substantive work the agent did in this conversation:
 
 - Code changes (features, fixes, refactors)
-- Commands the agent ran (shell, git, package managers, etc.)
+- Commands the agent ran (shell, git, package managers)
 - Configuration or tooling changes
 
 ## Step 1 — Target
@@ -43,7 +43,7 @@ Use this structure for every target — whether it's a code diff or a command:
 
 ### What
 
-What changed or ran, in one or two sentences. Name the files, functions, or command involved.
+What changed, in one or two sentences. Name the files, functions, or command involved.
 
 ### How
 
@@ -72,7 +72,7 @@ Call out unfamiliar concepts explicitly — one line each:
 - Command flags or CLI concepts
 - Patterns or idioms (e.g. "dependency injection", "idempotent", "tracer bullet")
 
-If everything in the explanation is already standard for a senior engineer in this stack, this section can be brief or omitted.
+If everything in the explanation is already standard for a competent engineer in this stack, this section can be brief or omitted.
 
 ## Tone and depth
 
