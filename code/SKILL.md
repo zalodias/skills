@@ -1,6 +1,6 @@
 ---
 name: code
-description: Code production guidance for agents. Use when writing React & TypeScript, building UI, naming files, variables and functions, or making any code styling decisions.
+description: Code production guidance for agents. Use when writing React & TypeScript, building UI, implementing motion, transitions, or animation, naming files, variables and functions, or making any code styling decisions.
 ---
 
 # Code
@@ -45,3 +45,9 @@ description: Code production guidance for agents. Use when writing React & TypeS
 - Prefer reusing existing project tokens. Always ask before introducing a new design token.
 - Use a `4` pixel grid. Prefer macro spacing on round pixel steps (`20`, `40`, `80`) for layout & section rhythm. Use micro spacing (`8`, `16`, `24`) for compact & tight UI.
 - Prefer `gap` and `padding` for layout. Avoid using `margin`. Keep spacing inside the component to ensure encapsulation, modularity & reusability.
+
+## Motion
+
+- Use [Motion](https://motion.dev/) when implementing custom animation & interaction in web.
+- Never `ease-in` on UI. It starts slow, delaying the exact moment the user is watching. Use `ease-out` as the default easing motion.
+- Avoid animating `width`, `height`, `top`, `left`, `margin`, or `padding`. They trigger layout recalculation on every frame. Instead, use `transform` (`scale`, `translate`) and `opacity`, which run on the GPU.
