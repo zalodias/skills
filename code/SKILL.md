@@ -10,7 +10,9 @@ description: Code production guidance for agents. Use when writing React & TypeS
 - Choose the simplest implementation that fully meets the current requirements. Avoid speculative abstraction, configuration, and indirection.
 - Follow established project conventions. When the project has no local pattern, study how established products solve the problem and adopt a proven approach.
 - Prefer self-explanatory code. Avoid using code comments to emit context.
-- Extract highly reusable structures, or single-use sections that own meaningful state, interaction, or complex derived data. Keep simple single-use structures inline — avoid premature abstraction.
+- Do not perform caution. Skip any redundant null check, optional chaining, type guard, or early return where the failure state is already impossible.
+- Avoid premature abstraction — keep single-use code inline. Extract only a module owning meaningful state, interaction, or complex derived data.
+- Prefer inline expressions over local variables.
 
 ## Naming & Syntax
 
