@@ -6,7 +6,7 @@ description: >-
   or similar after completing a skill-driven workflow.
 ---
 
-# Retro: Skill Improvement Cycle
+# Retro
 
 After a skill run, capture what worked, what caused friction, and what was missing — then bake the highest-value lessons directly into the relevant skill.
 
